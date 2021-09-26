@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.content {
+    overflow: scroll;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+section input.search {
+    position: absolute;
+    transform: translateY(30px);
+    display: none;
+}
+
+.button-search {
+    position: absolute;
+    right: 0;
+    transform: translateY(30px) translateX(-300px);
+    cursor: pointer;
+}
+
+section h2 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+label {
+    position: absolute;
+    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.labelHidden {
+    display: none;
+}
+
+input {
+    width: 400px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+li button {
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: orangered;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 5px;
+}
+
+.box {
+    background-color: rgb(107, 107, 107);
+    width: 400px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.flash-message {
+    background-color: orange;
+    height: 40px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    transform: translateY(-40px);
+    transition: all 1s;
+    box-sizing: border-box;
+}
+
+.flash-message p {
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.close {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    right: 8px;
+    top: 0;
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+.flash {
+    transform: translateY(100px);
+}
+
+@media screen and (max-width: 360px) {
+    input, .flash-message, .box {
+        width: 300px;
+    }
+
+}
