@@ -4,7 +4,6 @@ const section = document.querySelectorAll('section');
 const flashMessage = document.getElementsByClassName('flash-message')[0];
 const close = document.getElementsByClassName('close')[0];
 
-
 // storage
 if (typeof (localStorage !== 'undefined')) {
     console.log('Local storage available');
@@ -44,7 +43,7 @@ input[1].addEventListener('keydown', () => {
 })
 
 function syncLocalStorage(input1, input2) {
-    
+
     if (input1 == "Remove") {
         delete reference[input2];
     } else {
@@ -59,9 +58,9 @@ function syncLocalStorage(input1, input2) {
 const button = document.querySelector('button');
 button.addEventListener('click', (e) => {
 
-    if (input[1].value && input[2].value) {
-        const input1 = input[1].value;
-        const input2 = input[2].value;
+    if (input[0].value && input[1].value) {
+        const input1 = input[0].value;
+        const input2 = input[1].value;
 
         syncLocalStorage(input1, input2);
     } else {
@@ -72,11 +71,13 @@ button.addEventListener('click', (e) => {
 
 function designUI(in1, in2) {
     return /*html*/ `
-    <div class="box">
-        <span class="close">x</span>
-        <h5>${in1}</h5>
-        <a href="${in2}">${in2}</a>
-    </div>`;
+        <div class="box">
+            <div class="box-body">
+                <span class="close">x</span>
+                <h5>${in1}</h5>
+                <a href="${in2}">${in2}</a>
+            </div>
+        </div>`;
 }
 
 const box = document.querySelectorAll('.box');

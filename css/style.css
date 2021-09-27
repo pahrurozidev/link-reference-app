@@ -4,6 +4,7 @@
 }
 
 main {
+    background: #011627;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -85,16 +86,24 @@ li button:hover {
 }
 
 .box {
-    background-color: rgb(107, 107, 107);
-    width: 400px;
-    height: 65px;
+    background-color: #11263a;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.box-body {
+    width: 98%;
+    height: 55px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
-    padding: 10px;
-    margin: 10px 0;
-    position: relative;
+    overflow: auto;
 }
 
 .flash-message {
@@ -142,5 +151,9 @@ li button:hover {
     input, .flash-message, .box {
         width: 300px;
     }
+
+    .box-body {
+    height: 45px;
+}
 
 }
