@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 main {
@@ -19,6 +20,10 @@ main {
 
 section {
     margin-bottom: 50px;
+}
+
+a {
+    color: #205796;
 }
 
 section input.search {
@@ -56,6 +61,7 @@ label {
     position: absolute;
     margin-left: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #011627;
     font-size: 14px;
 }
 
@@ -66,20 +72,24 @@ label {
 input {
     width: 400px;
     padding: 8px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 5px;
     box-sizing: border-box;
 }
 
 li button {
+    color: #011627;
     width: 80px;
     height: 30px;
     position: absolute;
     right: 0;
     top: 0;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 li button:hover {
-    background-color: orangered;
+    background-color: #011627;
     color: white;
     border: 1px solid rgba(0, 0, 0, .3);
     border-radius: 5px;
